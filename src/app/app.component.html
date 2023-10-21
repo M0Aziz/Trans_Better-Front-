@@ -1,0 +1,189 @@
+<nav class="navbar navbar-expand-lg navbar " style="background-color: #ffffff;box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); "  id="navbar_hori" *ngIf="!isLoginPage">
+    <div class="container">
+    <a class="navbar-brand" routerLink="/dashborad__"><img src="../assets/logo_.png" width="100px"  class="img-fluid" alt="Logo"></a>
+    <span class="toggle-button " style="background-color: #ffffff; border: #ffffff;" >
+        <i class="fas fa-bars text-primary"  id="toggleNavbar" (click)="toggleVerticalNavbar()"></i>
+      </span>
+    <div class="ms-auto  ">
+      <div class="input-group">
+        <input type="text" id="Rechercher" class="form-control rounded-pill me-lg-3 me-md-2 me-2" placeholder="Rechercher">
+      
+
+        <span class="input-group-text  "  style="background-color: #ffffff; border: #ffffff;">
+          <i class="fas fa-bell text-primary"></i>
+        </span>
+        <span class="input-group-text " id="profileIcon" data-bs-toggle="dropdown" (click)="toggleProfile()"  style="background-color: #ffffff; border: #ffffff;">
+          <i class="fas fa-user text-primary"></i>
+        </span>
+        <ul class="dropdown-menu dropdown-menu-end" id="profileDropdown" aria-labelledby="profileIcon" *ngIf="isProfileOpen">
+          <li><a class="dropdown-item" routerLink="/login">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+  </nav>
+
+
+ <div class="row m-0"  >
+
+
+    <div class="col-lg-3 "  [ngClass]="{'col-lg-0': !isNavbarOpen, 'col-lg-3': isNavbarOpen, 'd-none': !isNavbarOpen}"  id="navbar_hori" >
+        <div class="container">
+
+      <div class="vertical-navbar mt-2"  *ngIf="!isLoginPage" >
+  
+        <ul class="list-unstyled">
+
+
+          <li (click)="handleItemClick('item0')" [ngClass]="{'selected': selectedItem === 'item0'}">
+            <a routerLink="/dashborad__">
+                <i class="fas fa-tachometer-alt" [ngStyle]="{'color': selectedItem === 'item0' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
+                <span [ngStyle]="{'color': selectedItem === 'item0' ? '#007BFF' : 'black'}">
+
+                Dashbord
+               </span>
+
+            </a>
+
+        </li>
+
+        <li>
+          <hr class="my-0 text-secondary">
+      </li>
+          <li (click)="handleItemClick('item1')" [ngClass]="{'selected': selectedItem === 'item1'}">
+            <a routerLink="/categorie">
+                <i class="fas fa-folder" [ngStyle]="{'color': selectedItem === 'item1' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
+                <span [ngStyle]="{'color': selectedItem === 'item1' ? '#007BFF' : 'black'}">
+
+                Catégorie
+                </span> 
+            </a>
+        </li>
+        <li>
+            <hr class="my-0 text-secondary">
+        </li>
+        <li (click)="handleItemClick('item2')" [ngClass]="{'selected': selectedItem === 'item2'}">
+            <a routerLink="">
+                <i class="fas fa-sitemap" [ngStyle]="{'color': selectedItem === 'item2' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
+                <span [ngStyle]="{'color': selectedItem === 'item2' ? '#007BFF' : 'black'}">
+
+                Sous-catégorie
+                </span>
+            </a>
+        </li>
+        <li>
+            <hr class="my-0 text-secondary">
+        </li>
+        <li (click)="handleItemClick('item3')" [ngClass]="{'selected': selectedItem === 'item3'}">
+            <a routerLink="">
+                <i class="fas fa-car" [ngStyle]="{'color': selectedItem === 'item3' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
+                <span [ngStyle]="{'color': selectedItem === 'item3' ? '#007BFF' : 'black'}">
+
+                Moyen de transport
+                </span>
+            </a>
+        </li>
+        <li>
+            <hr class="my-0 text-secondary">
+        </li>
+        <li (click)="handleItemClick('item4')" [ngClass]="{'selected': selectedItem === 'item4'}">
+            <a routerLink="">
+                <i class="fas fa-images" [ngStyle]="{'color': selectedItem === 'item4' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
+                <span [ngStyle]="{'color': selectedItem === 'item4' ? '#007BFF' : 'black'}">
+
+                Images
+                </span>
+            </a>
+        </li>
+        <li>
+            <hr class="my-0 text-secondary">
+        </li>
+        <li (click)="handleItemClick('item5')" [ngClass]="{'selected': selectedItem === 'item5'}">
+            <a routerLink="">
+                <i class="fas fa-ticket-alt" [ngStyle]="{'color': selectedItem === 'item5' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
+                <span [ngStyle]="{'color': selectedItem === 'item5' ? '#007BFF' : 'black'}">
+
+                Tickets
+                </span>
+            </a>
+        </li>
+        <li>
+            <hr class="my-0 text-secondary">
+        </li>
+        <li (click)="handleItemClick('item8')" [ngClass]="{'selected': selectedItem === 'item8'}">
+            <a routerLink="">
+                <i class="fas fa-clipboard-list" [ngStyle]="{'color': selectedItem === 'item8' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
+                <span [ngStyle]="{'color': selectedItem === 'item8' ? '#007BFF' : 'black'}">
+
+                Abonnement
+                </span>
+            </a>
+        </li>
+        <li>
+            <hr class="my-0 text-secondary">
+        </li>
+        <li (click)="handleItemClick('item6')" [ngClass]="{'selected': selectedItem === 'item6'}">
+            <a routerLink="">
+                <i class="fas fa-handshake" [ngStyle]="{'color': selectedItem === 'item6' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
+                <span [ngStyle]="{'color': selectedItem === 'item6' ? '#007BFF' : 'black'}">
+
+                Ligne de commande
+                </span>
+            </a>
+        </li>
+        <li>
+            <hr class="my-0 text-secondary">
+        </li>
+        <li (click)="handleItemClick('item7')" [ngClass]="{'selected': selectedItem === 'item7'}">
+            <a routerLink="">
+                <i class="fas fa-shopping-basket" [ngStyle]="{'color': selectedItem === 'item7' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
+                <span [ngStyle]="{'color': selectedItem === 'item7' ? '#007BFF' : 'black'}">
+
+                Commande
+                </span>
+            </a>
+        </li>
+        <li>
+            <hr class="my-0 text-secondary">
+        </li>
+        <li (click)="handleItemClick('item9')" [ngClass]="{'selected': selectedItem === 'item9'}">
+            <a routerLink="">
+                <i class="fas fa-users" [ngStyle]="{'color': selectedItem === 'item9' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
+                <span [ngStyle]="{'color': selectedItem === 'item9' ? '#007BFF' : 'black'}">
+
+                User
+                </span>
+            </a>
+        </li>
+          <li>
+              <hr class="my-0 text-secondary">
+          </li>
+          <li (click)="handleItemClick('item10')" [ngClass]="{'selected': selectedItem === 'item10'}">
+            <a routerLink=""> 
+            <i class="fas fa-envelope " [ngStyle]="{'color': selectedItem === 'item10' ? '#007BFF' : 'black'}" ></i>
+
+              <span [ngStyle]="{'color': selectedItem === 'item10' ? '#007BFF' : 'black'}">
+                  Contact
+              </span>
+            </a>
+          </li>
+      </ul>
+      
+
+
+        </div>
+
+  </div>
+</div>
+ 
+
+
+
+  <div class="col-lg-9 mt-5 " style="background-color: white;"  [ngClass]="{'col-lg-9': isNavbarOpen, 'col-lg-12': !isNavbarOpen}">
+
+
+<router-outlet></router-outlet>
+</div>
+
+</div>
+

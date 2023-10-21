@@ -1,0 +1,23 @@
+
+
+.btn{
+
+    width: 300px;
+}
+
+@media screen and (max-width:600px) {
+    .btn{
+
+        width:200px
+    }
+    
+}
+
+
+#image{
+    position: absolute;
+    width: 30%;
+    bottom: -280px;
+    left: -150px;
+}
+

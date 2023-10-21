@@ -1,0 +1,86 @@
+h1,h2,h3,h4,h5,h6,p,td,tr{
+    
+
+        font-family: 'Poppins';
+ 
+}
+
+#image{
+
+    position: relative;
+left:-100px;
+margin-top: 250px
+
+;}
+ul{
+margin-left: 70px;
+}
+
+.vertical-navbar {
+    background-color: #333;
+    width: 0;
+    height: 100%;
+    transition: width 0.3s; 
+  }
+  
+
+  
+  .vertical-navbar a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .vertical-navbar a i {
+    margin-right: 10px;
+  }
+  
+  .toggle-button {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+.my-0{
+border: 1px solid #E7E7E7;
+    opacity: 1;
+    width: 200px;
+
+}
+
+  .navbar-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navbar-list li {
+    padding: 10px;
+  }
+  
+  .vertical-navbar.active {
+    position: absolute;
+    left: 0;
+  }
+#profileDropdown {
+    position: absolute;
+    top:50px;
+    right: 0;
+    display: block;
+  }
+  
+  #profileDropdown.active {
+    display: block;
+  }
+
+
+.selected {
+    background-color: #007BFF;
+    border-left: 4px solid #007BFF;
+    color: #007BFF;
+  }
+
+  
