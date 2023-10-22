@@ -167,6 +167,21 @@
               </span>
             </a>
           </li>
+
+          <li>
+            <hr class="my-0 text-secondary">
+        </li>
+          <li (click)="handleItemClick('item11')" [ngClass]="{'selected': selectedItem === 'item11'}">
+            <a routerLink="/blog">
+              <i class="fas fa-blog" [ngStyle]="{'color': selectedItem === 'item11' ? '#007BFF' : 'black'}"></i>
+              <span [ngStyle]="{'color': selectedItem === 'item11' ? '#007BFF' : 'black'}">
+                Blog
+              </span>
+            </a>
+          </li>
+          <li>
+            <hr class="my-0 text-secondary">
+        </li>
       </ul>
       
 
