@@ -48,23 +48,18 @@ import { EditSousCategorieComponent } from './edit-sous-categorie/edit-sous-cate
     MoyenTransportComponent,
     AddMoyenComponent,
     ImageMoyenComponent,
-    AddImageComponent
-    
-  ],
-  imports: [
-    CommonModule,
-
-
+    AddImageComponent,
     UserComponent,
     AddUserComponent,
     CommandesComponent,
-    AddCommandeComponent
+    AddCommandeComponent,
 
     EditCategorieComponent,
     SousCategorieComponent,
     AddSousCategorieComponent,
     EditSousCategorieComponent
 
+    
   ],
   imports: [
     ReactiveFormsModule ,
@@ -72,9 +67,13 @@ import { EditSousCategorieComponent } from './edit-sous-categorie/edit-sous-cate
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    
-    
+
+    CommonModule,
+
+
+   
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
