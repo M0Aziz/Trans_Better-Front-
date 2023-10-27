@@ -1,0 +1,25 @@
+<div class="container" id="main-content">
+    <h2>Modifier un Ticket</h2>
+    <a routerLink="/ticket">Retour</a>
+  
+    <form (ngSubmit)="updateTicket()" style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);" class="m-3">
+      <div class="row m-5">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="ticketTitle" class="form-label mt-3"><h4>Titre</h4></label>
+            <input type="text" class="form-control" name="title" id="ticketTitle" placeholder="Titre" required [(ngModel)]="ticket.title">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="ticketPrice" class="form-label mt-3"><h4>Prix</h4></label>
+            <input type="number" class="form-control" id="ticketPrice" name="price" placeholder="Prix" required [(ngModel)]="ticket.price">
+          </div>
+        </div>
+      </div>
+      <div class="text-center mb-4">
+        <button type="submit" class="btn btn-primary rounded-pill m-3 pe-4 ps-4 py-2 mb-5 fw-bold">Modifier</button>
+      </div>
+    </form>
+  </div>
+  

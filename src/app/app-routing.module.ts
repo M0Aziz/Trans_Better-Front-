@@ -9,7 +9,16 @@ import { AddCategorieComponent } from './add-categorie/add-categorie.component';
 import { BlogComponent } from './blog/blog.component';
 import { AddblogComponent } from './addblog/addblog.component';
 import { EditblogComponent } from './editblog/editblog.component';
+import { TicketComponent } from './ticket/ticket.component';
+import { AddTicketComponent } from './add-ticket/add-ticket.component';
+import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
+
 const routes: Routes = [
+
+  { path: 'ticket', component: TicketComponent }, 
+  { path: 'add-ticket', component: AddTicketComponent },
+  { path: 'edit-ticket/:id', component: EditTicketComponent },
+
 
 
 
