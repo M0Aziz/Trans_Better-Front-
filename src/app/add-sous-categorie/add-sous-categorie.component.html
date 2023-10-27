@@ -1,8 +1,8 @@
 
 <div class="container" id="main-content">
-    <h2>Ajouter Une catégorie</h2>
+    <h2>Ajouter Sous catégorie</h2>
 
-    <a routerLink="/categorie" >Retour</a>
+    <a routerLink="/souscategorie" >Retour</a>
     
     <form #formulaire="ngForm" style="  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); " class="m-3">
       <div class="row m-5">
@@ -12,6 +12,21 @@
               <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" required
               ngModel #nom="ngModel" [ngStyle]="{'border-color': (nom.valid) ? 'green' : 'red'}"
               >
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="mb-3">
+                <label for="Nom" class="form-label mt-3 "><h4>Catgeorie</h4></label>
+
+                <select class="form-control" name="categorie" [(ngModel)]="selectedCategoryId"
+                
+               required >
+                    <option value="" selected >Choisir une Categorie</option>
+
+                    <option *ngFor="let c of cat" [value]="c.id">{{c.nom}}</option>
+                </select>
+             
             </div>
           </div>
        

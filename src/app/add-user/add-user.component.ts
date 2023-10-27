@@ -29,8 +29,10 @@ export class AddUserComponent {
   }
 
   onSubmit() {
+
     var createdAt = new Date();
     this.appService.addUser(this.addForm?.value.nom,this.addForm?.value.email,this.addForm?.value.password,createdAt).subscribe(
+
       res=>{
   
           alert('Utilisateur ajoutée')

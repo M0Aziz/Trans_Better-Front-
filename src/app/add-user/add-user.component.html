@@ -8,6 +8,7 @@
       <div class="row m-5">
           <div class="col-md-6">
             <div class="mb-3">
+
               <label for="nom" class="form-label mt-3 "><h4>Nom</h4></label>
               <input type="text" class="form-control" id="nom" placeholder="nom" formControlName="nom" required>
             </div>
@@ -19,6 +20,7 @@
               <div class="mb-3">
                 <label for="password" class="form-label mt-3 "><h4>Password</h4></label>
                 <input type="text" class="form-control" id="password" placeholder="password" formControlName="password" required>
+
               </div>
           </div>
        
@@ -26,7 +28,9 @@
         
 
         <div class="text-center mb-4">
+
       <button [disabled]="!addForm.valid" type="submit" class="btn btn-primary rounded-pill m-3 pe-4 ps-4 py-2 mb-5 fw-bold" >Ajouter</button>
+
   </div>
     </form>
   </div>

@@ -1,0 +1,51 @@
+
+    <div class="container">
+        <div class="row" style="margin:20px;">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Images</h2>
+                    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+                    <div class="card-body">
+                        <a href="addImage" class="btn btn-success btn-sm" title="Add New mean">
+                            Ajouter une image du moyen de transport
+                        </a>
+                        <br/>
+                        <br/>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Path</th>
+                                        <th>Moyen</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody *ngIf="images$ | async as data">
+                                        <tr *ngFor="let image of data">
+                                                <td>{{ image.idImageMoyen }}</td>
+                                                <td>{{ image.path }}</td>
+                                                <td>{{ image.moyenTransport.numero}}</td>
+        
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm" (click)="navigateToUpdate(image.idImageMoyen)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Modifier</button>
+                                                
+                                                    <button (click)="deleteImageMoyen(image.idImageMoyen)" type="submit" class="btn btn-danger btn-sm" title="Delete Image"><i class="fa fa-trash-o" aria-hidden="true" onclick=""></i> Supprimer</button>
+                                                    
+                                                </td>
+                                          
+                                        </tr>
+                                </tbody>                    
+                            </table>
+                        </div>
+  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

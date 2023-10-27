@@ -63,7 +63,7 @@
             <hr class="my-0 text-secondary">
         </li>
         <li (click)="handleItemClick('item2')" [ngClass]="{'selected': selectedItem === 'item2'}">
-            <a routerLink="">
+            <a routerLink="/souscategorie">
                 <i class="fas fa-sitemap" [ngStyle]="{'color': selectedItem === 'item2' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
                 <span [ngStyle]="{'color': selectedItem === 'item2' ? '#007BFF' : 'black'}">
 
@@ -75,29 +75,14 @@
             <hr class="my-0 text-secondary">
         </li>
         <li (click)="handleItemClick('item3')" [ngClass]="{'selected': selectedItem === 'item3'}">
-            <a routerLink="">
-                <i class="fas fa-car" [ngStyle]="{'color': selectedItem === 'item3' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
-                <span [ngStyle]="{'color': selectedItem === 'item3' ? '#007BFF' : 'black'}">
+          <a routerLink="/moyenTransport">
+              <i class="fas fa-car" [ngStyle]="{'color': selectedItem === 'item3' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
+              <span [ngStyle]="{'color': selectedItem === 'item3' ? '#007BFF' : 'black'}">
 
-                Moyen de transport
-                </span>
-            </a>
-        </li>
-        <li>
-            <hr class="my-0 text-secondary">
-        </li>
-        <li (click)="handleItemClick('item4')" [ngClass]="{'selected': selectedItem === 'item4'}">
-            <a routerLink="">
-                <i class="fas fa-images" [ngStyle]="{'color': selectedItem === 'item4' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
-                <span [ngStyle]="{'color': selectedItem === 'item4' ? '#007BFF' : 'black'}">
-
-                Images
-                </span>
-            </a>
-        </li>
-        <li>
-            <hr class="my-0 text-secondary">
-        </li>
+              Moyen de transport
+              </span>
+          </a>
+      </li>
         <li (click)="handleItemClick('item5')" [ngClass]="{'selected': selectedItem === 'item5'}">
             <a routerLink="">
                 <i class="fas fa-ticket-alt" [ngStyle]="{'color': selectedItem === 'item5' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
