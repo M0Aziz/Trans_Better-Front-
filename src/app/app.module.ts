@@ -12,10 +12,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogComponent } from './blog/blog.component';
 import { AddblogComponent } from './addblog/addblog.component';
 
+import { TicketComponent } from './ticket/ticket.component';
+import { AddTicketComponent } from './add-ticket/add-ticket.component';
+import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
+import { AbonementComponent } from './abonement/abonement.component';
+import { EditAbonementComponent } from './edit-abonement/edit-abonement.component';
+import { AddAbonementComponent } from './add-abonement/add-abonement.component'; 
+
 
 import { ContactComponent } from './contact/contact.component';
 import { AddContactComponent } from './add-contact/add-contact.component'; 
-=======
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -50,10 +56,17 @@ import { EditSousCategorieComponent } from './edit-sous-categorie/edit-sous-cate
     BlogComponent,
     AddblogComponent,
     EditblogComponent,
+    TicketComponent,
+    AddTicketComponent,
+    EditTicketComponent,
+    AbonementComponent,
+    EditAbonementComponent,
+    AddAbonementComponent,
+
 
 
     ContactComponent,
-    AddContactComponent
+    AddContactComponent,
 
 
     MoyenTransportComponent,
@@ -79,7 +92,6 @@ import { EditSousCategorieComponent } from './edit-sous-categorie/edit-sous-cate
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-
     CommonModule,
 
 
