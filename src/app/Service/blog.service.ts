@@ -10,28 +10,28 @@ export class BlogService {
 
 getBlogs(){
 
-  return this.httpClient.get("http://localhost:5000/blog/blogs");
+  return this.httpClient.get("http://localhost:8080/blog/blogs");
 
 
 }
 
 addBlogs(blogs:any){
 
-  return this.httpClient.post("http://localhost:5000/blog/blogs",blogs);
+  return this.httpClient.post("http://localhost:8080/blog/blogs",blogs);
 
 
 }
 
 loadBlogs(id:string){
 
-  return this.httpClient.get("http://localhost:5000/blog/blogs/"+id);
+  return this.httpClient.get("http://localhost:8080/blog/blogs/"+id);
 
 
 }
 
 putBlogs(_id:string,blog:any){
 
-  return this.httpClient.put("http://localhost:5000/blog/blogs/"+_id,blog);
+  return this.httpClient.put("http://localhost:8080/blog/blogs/"+_id,blog);
 
 
 }
@@ -39,7 +39,7 @@ putBlogs(_id:string,blog:any){
 
 DelBlogs(_id:string){
 
-  return this.httpClient.delete("http://localhost:5000/blog/blogs/"+_id);
+  return this.httpClient.delete("http://localhost:8080/blog/blogs/"+_id);
 
 
 }

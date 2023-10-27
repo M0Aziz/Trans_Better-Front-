@@ -12,7 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogComponent } from './blog/blog.component';
 import { AddblogComponent } from './addblog/addblog.component';
 import { FormsModule } from '@angular/forms';
-import { EditblogComponent } from './editblog/editblog.component'; 
+import { EditblogComponent } from './editblog/editblog.component';
+import { EditCategorieComponent } from './edit-categorie/edit-categorie.component';
+import { SousCategorieComponent } from './sous-categorie/sous-categorie.component';
+import { AddSousCategorieComponent } from './add-sous-categorie/add-sous-categorie.component';
+import { EditSousCategorieComponent } from './edit-sous-categorie/edit-sous-categorie.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,11 @@ import { EditblogComponent } from './editblog/editblog.component';
     AddCategorieComponent,
     BlogComponent,
     AddblogComponent,
-    EditblogComponent
+    EditblogComponent,
+    EditCategorieComponent,
+    SousCategorieComponent,
+    AddSousCategorieComponent,
+    EditSousCategorieComponent
   ],
   imports: [
     BrowserModule,

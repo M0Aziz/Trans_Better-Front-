@@ -1,13 +1,15 @@
-import { Component,OnInit } from '@angular/core';
-import { CategorieService } from '../Service/categorie.service';
-import { ActivatedRoute, Router } from '@angular/router';
 
+import { Component,OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { SouscategorieService } from '../Service/souscategorie.service';
 @Component({
-  selector: 'app-categorie',
-  templateUrl: './categorie.component.html',
-  styleUrls: ['./categorie.component.css']
+  selector: 'app-sous-categorie',
+  templateUrl: './sous-categorie.component.html',
+  styleUrls: ['./sous-categorie.component.css']
 })
-export class CategorieComponent  implements OnInit  {
+export class SousCategorieComponent implements OnInit  {
+
+
 cat :any;
 successMessage: string | undefined;
 
@@ -22,15 +24,15 @@ ngOnInit(): void {
   
   
 }
-  constructor(private catService:CategorieService,private route: ActivatedRoute, private router: Router) { }
+  constructor(private souscatService:SouscategorieService,private route: ActivatedRoute, private router: Router) { }
   closeAlert() {
-    this.successMessage = ''; // Efface le message de succès en affectant une chaîne vide
+    this.successMessage = ''; 
   }
   
 
   loadBlogs(){
 
-this.catService.getCategorie().subscribe((datas)=>{
+this.souscatService.getCategorie().subscribe((datas)=>{
 this.cat = datas},error => {console.log("il y a une Erreur avec la catégorie")},
 ()=>{console.log("Chargement categorie done !!")});
 
@@ -47,11 +49,10 @@ this.cat = datas},error => {console.log("il y a une Erreur avec la catégorie")}
     if (userConfirmed) {
 
       alert("Vous avez choisi de supprimer les données.");
-          this.catService.DelCategorie(id).subscribe((datas)=>{
+          this.souscatService.DelCategorie(id).subscribe((datas)=>{
             this.loadBlogs();
           })
        
-        alert("Vous avez choisi de supprimer les données.");
     } else {
         alert("Vous avez annulé l'opération.");
     }
