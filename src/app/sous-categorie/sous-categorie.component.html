@@ -5,11 +5,11 @@
     
     <div class="row">
         <div class="col-6">
-        <h2>Categorie</h2>
+        <h2>Sous Categorie</h2>
     </div>
     <div class="col-6 text-end">
     
-        <a routerLink="/Ajouter_Categorie"><button class="btn btn-primary" style="font-size: 20px;" ><i class="fas fa-plus mx-2"></i>Ajouter une Catégorie</button>
+        <a routerLink="/Ajouter_sousCategorie"><button class="btn btn-primary" style="font-size: 20px;" ><i class="fas fa-plus mx-2"></i>Ajouter une sous Catégorie</button>
     </a>
     </div>
     </div>
@@ -29,6 +29,8 @@
                 <tr class="text-center ">
                     <th>#</th>
                     <th>Nom</th>
+                    <th>categorie</th>
+
                     <th>Actions</th>
     
                 </tr>
@@ -37,10 +39,11 @@
                 <tr class="text-center"  *ngFor="let c of cat"> 
                     <td style="color: black;"> {{c.id}}</td>
                     <td >{{c.nom}}</td>
-    
+                    <td >{{c.categorie.nom}}</td>
+
     
                     <td>
-                        <span style="color: green;" [routerLink]="['/edit_cat', c.id]">
+                        <span style="color: green;" [routerLink]="['/edit_souscat', c.id]">
                             <i class="fas fa-edit"></i>
                         </span>
                         <span style="color: red; margin-left: 10px;">

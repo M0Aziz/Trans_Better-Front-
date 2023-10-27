@@ -5,19 +5,14 @@
     
     <div class="row">
         <div class="col-6">
-        <h2>Categorie</h2>
+        <h2>Commande</h2>
     </div>
     <div class="col-6 text-end">
     
-        <a routerLink="/Ajouter_Categorie"><button class="btn btn-primary" style="font-size: 20px;" ><i class="fas fa-plus mx-2"></i>Ajouter une Catégorie</button>
+        <a routerLink="/add_commande"><button class="btn btn-primary" style="font-size: 20px;" ><i class="fas fa-plus mx-2"></i>Ajouter une commande</button>
     </a>
     </div>
     </div>
-
-    <div *ngIf="successMessage" class="alert alert-success alert-dismissible fade show">
-        {{ successMessage }}
-        <button type="button" class="btn-close" (click)="closeAlert()" aria-label="Close"></button>
-      </div>
     
     <div class="mt-5" style="  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); ">
     
@@ -27,30 +22,34 @@
         <table class="table mt-5">
             <thead >
                 <tr class="text-center ">
-                    <th>#</th>
-                    <th>Nom</th>
-                    <th>Actions</th>
+                    <th>ID Commande</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>ticket</th>
     
                 </tr>
             </thead>
             <tbody>
-                <tr class="text-center"  *ngFor="let c of cat"> 
-                    <td style="color: black;"> {{c.id}}</td>
-                    <td >{{c.nom}}</td>
+                <tr class="text-center" *ngFor="let commande of commandes"> 
+                    <td > {{commande.id}}</td>
+                    <td > {{commande.quantity}}</td>
+                    <td > {{commande.total}}</td>
+                    <td > {{commande.ticket_id}}</td>
+
     
     
                     <td>
-                        <span style="color: green;" [routerLink]="['/edit_cat', c.id]">
+                        <span style="color: green;">
                             <i class="fas fa-edit"></i>
                         </span>
                         <span style="color: red; margin-left: 10px;">
-                            <i class="fa fa-trash" (click)="  openDeleteConfirmationModal(c.id)" aria-hidden="true"></i> 
+                            <i class="fa fa-trash" (click)="  openDeleteConfirmationModal(commande.id)" aria-hidden="true"></i> 
                         </span>
                     </td>
                 </tr>
     
     
-             
+                
                 
             </tbody>
         </table>
