@@ -146,8 +146,8 @@
         <li>
             <hr class="my-0 text-secondary">
         </li>
-        <li (click)="handleItemClick('item9')" [ngClass]="{'selected': selectedItem === 'item9'}">
-            <a routerLink="">
+        <li (click)="handleItemClick('item9')" [ngClass]="{'selected': selectedItem === 'item9'}" >
+            <a routerLink="/users">
                 <i class="fas fa-users" [ngStyle]="{'color': selectedItem === 'item9' ? '#007BFF' : 'black'}" style="margin-right: 10px;"></i>
                 <span [ngStyle]="{'color': selectedItem === 'item9' ? '#007BFF' : 'black'}">
 
@@ -159,7 +159,7 @@
               <hr class="my-0 text-secondary">
           </li>
           <li (click)="handleItemClick('item10')" [ngClass]="{'selected': selectedItem === 'item10'}">
-            <a routerLink=""> 
+            <a routerLink="/contacts"> 
             <i class="fas fa-envelope " [ngStyle]="{'color': selectedItem === 'item10' ? '#007BFF' : 'black'}" ></i>
 
               <span [ngStyle]="{'color': selectedItem === 'item10' ? '#007BFF' : 'black'}">

@@ -1,0 +1,38 @@
+
+<div class="container" id="main-content">
+    <h2>Ajouter Contact</h2>
+
+    <a routerLink="/contacts" >Retour</a>
+    
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()" style="  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); " class="m-3">
+      <div class="row m-5">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="objet" class="form-label mt-3 "><h4>Objet</h4></label>
+              <input type="text" class="form-control" id="objet" placeholder="objet" formControlName="objet" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label mt-3 "><h4>Message</h4></label>
+                <input type="text" class="form-control" id="message" placeholder="message" formControlName="message" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="userr" class="form-label mt-3 "><h4>User</h4></label>
+
+                <select name="userr" class="form-select" aria-label="Default select example" formControlName="userr">
+                    <option *ngFor="let user of listUser" [value]="user.id">{{user.nom}}</option>
+                  </select>
+              </div>
+          </div>
+       
+        </div>
+        
+
+        <div class="text-center mb-4">
+      <button [disabled]="!addForm.valid" type="submit" class="btn btn-primary rounded-pill m-3 pe-4 ps-4 py-2 mb-5 fw-bold" >Ajouter</button>
+  </div>
+    </form>
+  </div>
+
+
+

@@ -11,8 +11,12 @@ import { AddCategorieComponent } from './add-categorie/add-categorie.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogComponent } from './blog/blog.component';
 import { AddblogComponent } from './addblog/addblog.component';
-import { FormsModule } from '@angular/forms';
-import { EditblogComponent } from './editblog/editblog.component'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditblogComponent } from './editblog/editblog.component';
+import { UserComponent } from './user/user.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { ContactComponent } from './contact/contact.component';
+import { AddContactComponent } from './add-contact/add-contact.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +26,14 @@ import { EditblogComponent } from './editblog/editblog.component';
     AddCategorieComponent,
     BlogComponent,
     AddblogComponent,
-    EditblogComponent
+    EditblogComponent,
+    UserComponent,
+    AddUserComponent,
+    ContactComponent,
+    AddContactComponent
   ],
   imports: [
+    ReactiveFormsModule ,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
