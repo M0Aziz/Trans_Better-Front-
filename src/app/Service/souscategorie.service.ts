@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class SouscategorieService {
 
-  url = "http://localhost:9090/souscategories/"
+  url = "http://localhost:8082/categorie/souscategories/"
   constructor(private httpClient : HttpClient) { }
 
 

@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class CategorieService {
 
-  url ="http://localhost:9090/categories/"
+  url ="http://localhost:8082/categorie/categories/"
 
   constructor(private httpClient : HttpClient) { }
 
