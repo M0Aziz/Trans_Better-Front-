@@ -21,7 +21,7 @@
     <p class="mt-4 text-center">welcome Please enter login credentials</p>
 
     <div class="container mt-5">
-        <form action="dashborad__">
+        <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
           
       
           <div class="row mb-3">
@@ -29,7 +29,7 @@
             </div>
                 <div class="col-md-10">
               <label for="email" class="form-label"><h5>Email </h5></label>
-              <input type="email" class="form-control border-bottom" id="email" >
+              <input type="email" class="form-control border-bottom" id="email" formControlName="email">
             </div>
             <div class="col-md-1">
             </div>
@@ -40,7 +40,7 @@
             </div>
             <div class="col-md-10">
               <label for="password" class="form-label"><h5>Password</h5></label>
-              <input type="password" class="form-control border-bottom" id="password" >
+              <input type="password" class="form-control border-bottom" id="password" formControlName="password">
             </div>
             <div class="col-md-1">
             </div>

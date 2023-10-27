@@ -39,4 +39,9 @@ export class AppService {
 
     return this.http.post(`${this.baseUrl}/contactus`,{objet,message ,createdAt ,userr});
   }
+
+  Login(email: any,password: any): Observable<any> {
+
+    return this.http.post(`${this.baseUrl}/user/login`,{email,password});
+  }
 }
