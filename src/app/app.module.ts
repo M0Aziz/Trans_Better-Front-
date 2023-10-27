@@ -13,7 +13,14 @@ import { BlogComponent } from './blog/blog.component';
 import { AddblogComponent } from './addblog/addblog.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EditblogComponent } from './editblog/editblog.component';
+
+import { CommonModule } from '@angular/common';
+import { MoyenTransportComponent } from './moyen-transport/moyen-transport.component';
+import { AddMoyenComponent } from './moyen-transport/add-moyen/add-moyen.component';
+import { ImageMoyenComponent } from './image-moyen/image-moyen.component';
+import { AddImageComponent } from './image-moyen/add-image/add-image.component';
+
+
 import { UserComponent } from './user/user.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { CommandesComponent } from './commandes/commandes.component';
@@ -26,6 +33,7 @@ import { SousCategorieComponent } from './sous-categorie/sous-categorie.componen
 import { AddSousCategorieComponent } from './add-sous-categorie/add-sous-categorie.component';
 import { EditSousCategorieComponent } from './edit-sous-categorie/edit-sous-categorie.component'; 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +44,16 @@ import { EditSousCategorieComponent } from './edit-sous-categorie/edit-sous-cate
     BlogComponent,
     AddblogComponent,
     EditblogComponent,
+
+    MoyenTransportComponent,
+    AddMoyenComponent,
+    ImageMoyenComponent,
+    AddImageComponent
+    
+  ],
+  imports: [
+    CommonModule,
+
 
     UserComponent,
     AddUserComponent,
@@ -53,7 +71,9 @@ import { EditSousCategorieComponent } from './edit-sous-categorie/edit-sous-cate
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

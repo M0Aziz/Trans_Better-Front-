@@ -1,0 +1,53 @@
+
+    <div class="container">
+        <div class="row" style="margin:20px;">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Moyens</h2>
+                    </div>
+
+
+
+                    <div class="card-body">
+                        <a href="/addMoyen" class="btn btn-success btn-sm" title="Add New mean">
+                            Ajouter un Moyen de transport
+                        </a>
+                        <a href="/imageMoyen" class="btn btn-success btn-sm" title="List">
+                            Liste des moyens de transport
+                        </a>
+                        <br/>
+                        <br/>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Numero</th>
+                                        <th>Description</th>
+                                        <th>Horaire</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let moyen of moyens">
+                                        <td>{{ moyen.idMoyen }}</td>
+                                        <td>{{ moyen.numero }}</td>
+                                        <td>{{ moyen.description }}</td>
+                                        <td>{{ moyen.horaire | date:'HH:ss' }}</td>
+  
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" (click)="navigateToUpdate(moyen.idMoyen)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Modifier</button>                                            
+                                            <button (click)="deleteMoyenTransport(moyen.idMoyen)" type="submit" class="btn btn-danger btn-sm" title="Delete mean"><i class="fa fa-trash-o" aria-hidden="true"></i> Supprimer</button>                                                                           
+                                        </td>
+                                    </tr>
+                                </tbody>                    
+                            </table>
+                        </div>
+  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

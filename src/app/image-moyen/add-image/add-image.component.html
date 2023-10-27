@@ -1,0 +1,28 @@
+
+  
+<div class="card" style="margin:20px;">
+  <div class="card-body">
+  <h2 >Ajouter une image pour un moyen </h2>
+
+      <form  (ngSubmit)="onSubmit()" [formGroup]="imageForm">
+
+        <div class="mb-3"> 
+            <label>Selectioner un moyen de transport</label>
+            <br/>
+            <select name="numMoyen" class="form_control" formControlName="numMoyen">
+              <option *ngFor="let moyen of moyens">{{ moyen.numero }}</option>
+            </select>
+        </div>   
+        <label>Path</label>
+        <input type="text" name="path" id="path" class="form-control" formControlName="path"required>   
+        <div *ngIf="imageForm.get('path')?.hasError('required') && imageForm.get('path')?.touched">
+          <label [ngClass]="{'error': imageForm.get('path')?.hasError('required')}">Champ requis.</label>
+        </div>
+
+        <input type="submit" value="Save" class="btn btn-success" required>    <br/>
+
+    </form>
+    
+  </div>
+</div>
+  
