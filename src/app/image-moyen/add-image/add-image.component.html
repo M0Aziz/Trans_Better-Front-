@@ -10,7 +10,7 @@
             <label>Selectioner un moyen de transport</label>
             <br/>
             <select name="numMoyen" class="form_control" formControlName="numMoyen">
-              <option *ngFor="let moyen of moyens">{{ moyen.numero }}</option>
+              <option *ngFor="let moyen of moyens" [value]="moyen.numero">{{ moyen.numero }}</option>
             </select>
         </div>   
         <label>Path</label>

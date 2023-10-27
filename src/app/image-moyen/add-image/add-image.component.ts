@@ -35,7 +35,7 @@ export class AddImageComponent {
     buildForm(): void {
       this.imageForm = this.formBuilder.group({
         path: ['', v.required],
-        numMoyen: [null, v.required],
+        numMoyen: ['', v.required],
       });
     }
 
@@ -58,19 +58,22 @@ export class AddImageComponent {
 
 
   onSubmit() {
+
+   
     
-    if (this.imageForm.valid) {
+    
+      console.log(this.imageForm.get('numMoyen')!.value)
       const imageData = {
         path: this.imageForm.get('path')?.value,
         numMoyen: Number(this.imageForm.get('numMoyen')?.value),
       }    
-        this.http.post('http://localhost:9090/imageMoyen/addImageMoyen', imageData)
+        this.http.post('http://localhost:8082/moyen/imageMoyen/addImageMoyen', imageData)
         .subscribe((response) => {
           console.log('Réponse de l\'API :', response);
           this.router.navigate(['/imageMoyen']);
         }, (error) => {
           console.error('Erreur lors de la requête :', error);
         });
-    }
+    
   }
 }

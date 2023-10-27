@@ -8,7 +8,7 @@ import { ImageMoyenModel } from '../model/image-moyen.model';
 })
 export class ImageMoyenService {
 
-  BASE_URL= "http://localhost:9090/";
+  BASE_URL= "http://localhost:8082/moyen/";
 
 
   constructor(private httpClient: HttpClient) {}
