@@ -12,6 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogComponent } from './blog/blog.component';
 import { AddblogComponent } from './addblog/addblog.component';
 
+
+import { ContactComponent } from './contact/contact.component';
+import { AddContactComponent } from './add-contact/add-contact.component'; 
+=======
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CommonModule } from '@angular/common';
@@ -34,6 +39,7 @@ import { AddSousCategorieComponent } from './add-sous-categorie/add-sous-categor
 import { EditSousCategorieComponent } from './edit-sous-categorie/edit-sous-categorie.component'; 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +50,11 @@ import { EditSousCategorieComponent } from './edit-sous-categorie/edit-sous-cate
     BlogComponent,
     AddblogComponent,
     EditblogComponent,
+
+
+    ContactComponent,
+    AddContactComponent
+
 
     MoyenTransportComponent,
     AddMoyenComponent,
@@ -60,6 +71,7 @@ import { EditSousCategorieComponent } from './edit-sous-categorie/edit-sous-cate
     EditSousCategorieComponent
 
     
+
   ],
   imports: [
     ReactiveFormsModule ,

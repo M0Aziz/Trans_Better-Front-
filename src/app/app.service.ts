@@ -7,7 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class AppService {
   baseUrl="http://localhost:8082/user"
+
   baseurl2="http://localhost:8082/commande"
+
   constructor(private http:HttpClient ) { }
   listUsers(): Observable<any> {
    
@@ -20,6 +22,32 @@ export class AppService {
   }
 
   
+
+  addUser(nom: any,email: any,password: any , createdAt:Date): Observable<any> {
+
+    return this.http.post(`${this.baseUrl}/user`,{nom,email ,password ,createdAt});
+  }
+
+  listContacts(): Observable<any> {
+   
+    return this.http.get(`${this.baseUrl}/contactus`);
+  }
+
+  
+  deleteContact(id: any): Observable<any> {
+  
+    return this.http.delete(`${this.baseUrl}/contactus/${id}`);
+  }
+
+  addContact(objet: any,message: any, createdAt:Date, userr:any): Observable<any> {
+
+    return this.http.post(`${this.baseUrl}/contactus`,{objet,message ,createdAt ,userr});
+  }
+
+  Login(email: any,password: any): Observable<any> {
+
+    return this.http.post(`${this.baseUrl}/user/login`,{email,password});
+
   addCommande(total: any,quantity: any,ticket_id: any): Observable<any> {
 
     return this.http.post(`${this.baseurl2}/commande/add`,{total,quantity ,ticket_id });
@@ -35,8 +63,5 @@ export class AppService {
   }
 
   
-  addUser(nom: any,email: any,password: any): Observable<any> {
-
-    return this.http.post(`${this.baseUrl}/user`,{nom,email ,password });
-  }
+  
 }
