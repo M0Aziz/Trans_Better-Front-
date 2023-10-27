@@ -1,0 +1,22 @@
+<div class="container" id="main-content">
+    <h2>Modifier categorie</h2>
+    <a routerLink="/blog">Retour</a>
+  
+    <form (ngSubmit)="updateCat()" style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);" class="m-3">
+        <div class="row m-5">
+            <div class="col-md-6">
+      <div class="mb-3">
+        <label for="Nom" class="form-label mt-3"><h4>Nom</h4></label>
+        <input type="text" class="form-control" name="nom" id="Nom" placeholder="Nom" required [(ngModel)]="cat.nom"
+      
+        >
+      </div>
+  </div>
+ 
+  </div>
+      <div class="text-center mb-4">
+        <button type="submit" class="btn btn-primary rounded-pill m-3 pe-4 ps-4 py-2 mb-5 fw-bold">Modifier</button>
+      </div>
+    </form>
+  </div>
+  

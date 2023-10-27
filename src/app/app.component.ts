@@ -24,6 +24,13 @@ export class AppComponent {
   isProfileOpen = false;
   selectedItem: string = ''; 
 
+  ngOnInit(): void {
+    var test = localStorage.getItem('auth')
+    if(test != 'true'){
+      this.router.navigate(['/login']);
+    }
+    }
+
   handleItemClick(item: string): void {
     this.selectedItem = item; 
   }
@@ -33,6 +40,11 @@ export class AppComponent {
   toggleVerticalNavbar() {
 
     this.isNavbarOpen = !this.isNavbarOpen;
+  }
+
+  logout(){
+    localStorage.removeItem('auth');
+    this.router.navigate(['/login']);
   }
 
  
