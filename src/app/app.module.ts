@@ -15,7 +15,10 @@ import { FormsModule } from '@angular/forms';
 import { EditblogComponent } from './editblog/editblog.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
-import { EditTicketComponent } from './edit-ticket/edit-ticket.component'; 
+import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
+import { AbonementComponent } from './abonement/abonement.component';
+import { EditAbonementComponent } from './edit-abonement/edit-abonement.component';
+import { AddAbonementComponent } from './add-abonement/add-abonement.component'; 
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
     EditblogComponent,
     TicketComponent,
     AddTicketComponent,
-    EditTicketComponent
+    EditTicketComponent,
+    AbonementComponent,
+    EditAbonementComponent,
+    AddAbonementComponent
   ],
   imports: [
     BrowserModule,

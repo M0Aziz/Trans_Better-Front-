@@ -12,12 +12,20 @@ import { EditblogComponent } from './editblog/editblog.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
+import { AbonementComponent } from './abonement/abonement.component';
+import { AddAbonementComponent } from './add-abonement/add-abonement.component';
+import { EditAbonementComponent } from './edit-abonement/edit-abonement.component';
 
 const routes: Routes = [
 
   { path: 'ticket', component: TicketComponent }, 
   { path: 'add-ticket', component: AddTicketComponent },
   { path: 'edit-ticket/:id', component: EditTicketComponent },
+
+  
+  { path: 'abonnement', component: AbonementComponent }, 
+  { path: 'add-abonement', component: AddAbonementComponent },
+  { path: 'edit-abonement/:id', component: EditAbonementComponent},
 
 
 

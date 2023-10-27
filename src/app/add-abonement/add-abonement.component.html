@@ -1,0 +1,15 @@
+<!-- add-abonement.component.html -->
+<form #formulaire="ngForm">
+    <div class="mb-3">
+        <label for="newAbonementTitle" class="form-label">Title</label>
+        <input type="text" class="form-control" name="title" id="newAbonementTitle" [(ngModel)]="newAbonementTitle"
+            ngModel #title="ngModel" [ngStyle]="{'border-color': (title.valid) ? 'green' : 'red'}">
+    </div>
+    <div class="mb-3">
+        <label for="newAbonementPrice" class="form-label">Price</label>
+        <input type="number" class="form-control" name="price" id="newAbonementPrice"
+            [(ngModel)]="newAbonementPrice" ngModel #price="ngModel"
+            [ngStyle]="{'border-color': (price.valid) ? 'green' : 'red'}">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="createAbonement(formulaire.value)">Save changes</button>
+</form>
