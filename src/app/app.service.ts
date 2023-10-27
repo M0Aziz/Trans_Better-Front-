@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class AppService {
   baseUrl="http://localhost:8082/user"
-  baseurl2="http://localhost:9090"
+  baseurl2="http://localhost:8282/commande"
   constructor(private http:HttpClient ) { }
   listUsers(): Observable<any> {
    
