@@ -49,7 +49,7 @@ export class AddMoyenComponent {
   onSubmit() {
     if (this.moyenForm.valid) {
       const moyenData = this.moyenForm.value;
-      this.http.post('http://localhost:9090/moyenTransport/addMoyenTransport', moyenData)
+      this.http.post('http://localhost:8082/moyen/moyenTransport/addMoyenTransport', moyenData)
         .subscribe((response) => {
           console.log('Réponse de l\'API :', response);
           this.router.navigate(['/moyenTransport']);

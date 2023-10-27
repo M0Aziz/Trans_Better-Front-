@@ -6,7 +6,7 @@ import { MoyenTransportModel } from '../model/moyen-transport.model';
   providedIn: 'root'
 })
 export class MoyenTransportService {
-BASE_URL= "http://localhost:9090/";
+BASE_URL= "http://localhost:8082/moyen/";
 
 
 constructor(private httpClient: HttpClient) {}
